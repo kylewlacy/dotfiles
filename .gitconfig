@@ -13,7 +13,7 @@
 	aa = add --all
   as = "!git add --all && git status"
   cl = clean
-  dotfiles = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
+  df = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
   fa = fetch --all
 	man = help
 	amend = commit --amend
@@ -40,7 +40,7 @@
 	cl = clone
 	clg = "!source ~/Documents/Scripts/Git/Github.sh"
 [core]
-	editor = choc -w
+	editor = vim
 [color]
 	ui = true
 [diff]
