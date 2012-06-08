@@ -12,12 +12,14 @@
   ss = "status -uno"
 	co = checkout
 	aa = add --all
-  as = "!git add --all && git status"
+  au = add -u
+  aas = "!git add --all && git status"
+  aus = "!git add --all && git status"
   cl = clean
   df = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
   fa = fetch --all
 	man = help
-	amend = commit --amend
+	am = commit --amend
   undo = reset --hard
   history = reflog show HEAD
   unstage = rm --cached
