@@ -1,0 +1,47 @@
+[http]
+	sslcapath = .
+	sslcainfo = gitserver.crt
+[user]
+	email = kylewlacy@me.com
+	name = Kyle Lacy
+[mergetool]
+	keepBackup = true
+[alias]
+	h = help
+	s = status
+	co = checkout
+	aa = add --all
+  as = "!git add --all && git status"
+  cl = clean
+  dotfiles = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
+  fa = fetch --all
+	man = help
+	amend = commit --amend
+  undo = reset --hard
+  history = reflog show HEAD
+  untrack = rm --cached
+  cld = "!for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done"
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cc = commit -a -m 
+	
+	d = diff
+	dc = diff --check
+	dl = diff HEAD~1
+	
+	l = "!source ~/Documents/Scripts/Git/Log.sh"
+	ls = !git l --stat --color
+	ll = "!source ~/Documents/Scripts/Git/Quicklog.sh"
+	lf = "!source ~/Documents/Scripts/Git/Details.sh"
+	ld = !git lf -n1
+	lt = "!source ~/Documents/Scripts/Git/Tree.sh"
+		
+	cl = clone
+	clg = "!source ~/Documents/Scripts/Git/Github.sh"
+[core]
+	editor = choc -w
+[color]
+	ui = true
+[diff]
+	tool = vimdiff
