@@ -48,9 +48,9 @@ noremap ' `
 nnoremap ` '
 
 
-nnoremap <leader>q <C-w>
-nmap <leader>qt gt
-nmap <leader>qT gT
+nnoremap <leader>r <C-w>
+nmap <leader>rt gt
+nmap <leader>rT gT
 
 nmap <leader>ssh :leftabove vsplit<CR>
 nmap <leader>ssj :rightbelow split<CR>

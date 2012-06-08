@@ -9,6 +9,7 @@
 [alias]
 	h = help
 	s = status
+  ss = "status -uno"
 	co = checkout
 	aa = add --all
   as = "!git add --all && git status"
@@ -19,7 +20,7 @@
 	amend = commit --amend
   undo = reset --hard
   history = reflog show HEAD
-  untrack = rm --cached
+  unstage = rm --cached
   cld = "!for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done"
 	c = commit
 	ca = commit -a
@@ -30,17 +31,18 @@
 	dc = diff --check
 	dl = diff HEAD~1
 	
-	l = "!source ~/Documents/Scripts/Git/Log.sh"
+	l = "!source ~/.gitscripts/log.sh"
 	ls = !git l --stat --color
-	ll = "!source ~/Documents/Scripts/Git/Quicklog.sh"
-	lf = "!source ~/Documents/Scripts/Git/Details.sh"
+  ll = "!source ~/.gitscripts/log-extended.sh"
+	lf = "!source ~/.gitscripts/log-details.sh"
 	ld = !git lf -n1
-	lt = "!source ~/Documents/Scripts/Git/Tree.sh"
+	lt = "!source ~/.gitscripts/log-tree.sh"
 		
 	cl = clone
-	clg = "!source ~/Documents/Scripts/Git/Github.sh"
+	clg = "!source ~/.gitscripts/clone-github.sh"
 [core]
 	editor = vim
+	excludesfile = /Users/kyle/.gitignore
 [color]
 	ui = true
 [diff]
