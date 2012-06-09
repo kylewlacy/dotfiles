@@ -11,8 +11,8 @@
 	s = status
   ss = "status -uno"
 	co = checkout
-	aa = add --all
-  au = add -u
+	aa = "add --all"
+  au = "add -u"
   aas = "!git add --all && git status"
   aus = "!git add --all && git status"
   cl = clean
@@ -47,5 +47,5 @@
 	excludesfile = /Users/kyle/.gitignore
 [color]
 	ui = true
-[diff]
-	tool = vimdiff
+; [diff]
+; 	tool = vimdiff

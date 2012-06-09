@@ -28,7 +28,7 @@ highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
 if has("gui_running")
   set guioptions=egmt
   set guifont=Monaco:h18
-  set transparency=10
+  set transparency=5
   color twilight
 endif
 
@@ -46,13 +46,13 @@ nnoremap <leader>a 0
 vnoremap <leader>a 0
 nnoremap <leader>f $
 vnoremap <leader>f $
-nnoremap <CR> :set nohlsearch!<CR>
+nnoremap <leader><CR> :set nohlsearch!<CR>
 nmap <leader>e :CommandT<CR>
-nmap <leader>v <leader>av<leader>f
+nmap <leader>v ^v$
 map !! <ESC>:! 
 nmap <leader>! :ConqueTerm sh<CR>
-noremap ' `
-nnoremap ` '
+" noremap ' `
+" nnoremap ` '
 
 
 nnoremap <leader>r <C-w>
