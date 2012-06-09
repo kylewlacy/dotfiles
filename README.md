@@ -16,6 +16,10 @@ Reinstallation
 Run the following commands to reinstall all dotfiles back to the home directory:
  
     $ cd ~
-    $ git clone git://github.com/kylewlacy/dotfiles.git
+    $ git clone --recursive git://github.com/kylewlacy/dotfiles.git
     $ mv dotfiles{,.}* .
     $ mv .git .dotfiles.git
+
+Notes
+-----
+If Command-T gives you errors, `cd .vim/bundles/command-t` and `rake make` it
