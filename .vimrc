@@ -1,5 +1,6 @@
 " The .vimrc file
 " For dependencies and the like, see the README file
+set linebreak
 set expandtab
 set autoindent
 set smartindent
