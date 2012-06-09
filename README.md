@@ -16,5 +16,6 @@ Reinstallation
 Run the following commands to reinstall all dotfiles back to the home directory:
  
     $ cd ~
-    $ git clone git://github.com/k25125/dotfiles.git .dotfiles.git --bare
-    $ git checkout-index --prefix=~/
+    $ git clone git://github.com/kylewlacy/dotfiles.git
+    $ mv dotfiles{,.}* .
+    $ mv .git .dotfiles.git
