@@ -8,19 +8,13 @@ This setup has been developed and tested with the following tools in mind:
 - Mac OS X (10.7.4)
 - Terminal.app
 - Git (1.7.7.5, Apple Git-26)
-- Vim (7.3, commit edb9e40 on the [b4winckler vim mirror](http://github.com/b4winckler/vim))
-  - Built with:
-      $ /* patch -p1 \< ~/.patches/vim-breakindent.patch */
-      $ cd src
-      $ ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp
-      $ make
-      $ make install
-   - Uses Pathogen to load plugin bundles, which can be found in the .vim folder
+- Vim (7.3, custom build)
+Install the latest tested versions of each tool (compiled from source, of course) by running the scripts found in ~/.build/
 
 Reinstallation
 --------------
 Run the following commands to reinstall all dotfiles back to the home directory:
  
-  $ cd ~
-  $ git clone git://github.com/k25125/dotfiles.git .dotfiles.git --bare
-  $ git checkout-index --prefix=~/
+    $ cd ~
+    $ git clone git://github.com/k25125/dotfiles.git .dotfiles.git --bare
+    $ git checkout-index --prefix=~/
