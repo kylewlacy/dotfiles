@@ -4,3 +4,6 @@
 [submodule "/Users/kyle/.vim/bundle/command-t"]
 	path = /Users/kyle/.vim/bundle/command-t
 	url = git://github.com/wincent/Command-T.git
+[submodule ".vim/bundle/conque"]
+	path = .vim/bundle/conque
+	url = git://github.com/rygwdn/vim-conque.git
