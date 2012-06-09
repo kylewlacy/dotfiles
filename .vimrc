@@ -13,12 +13,6 @@ set t_Co=256
 if exists("&breakindent")
   set breakindent
 endif
-if exists(":CommandT")
-  let g:CommandTAlwaysShowDotFiles=1
-  let g:CommandTScanDotDirectories=1
-  let g:CommandTMaxDepth=5
-  set wildignore="/Applications/**,/Library/**,.git/**,"
-endif
 call pathogen#infect()
 
 syntax on
@@ -75,3 +69,12 @@ nmap <leader>dh :topleft vnew<CR>
 nmap <leader>dj :botright new<CR>
 nmap <leader>dk :topleft new<CR>
 nmap <leader>dl :botright vnew<CR>
+
+autocmd VimEnter * :call Plugins()
+function Plugins()
+  if exists(":CommandT")
+    let g:CommandTAlwaysShowDotFiles=1
+    let g:CommandTScanDotDirectories=1
+    set wildignore=".git/**,.Trash/**,.DS_Store,*.swp"
+  endif
+endfunction
