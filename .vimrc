@@ -32,7 +32,6 @@ map <leader>y :w !pbcopy<CR><CR>
 map <leader>p :r !pbpaste<CR>
 map <leader>t :tabnew<CR>
 nmap <leader>T :tab split<CR>
-nmap <leader>w :tabclose<CR>
 nmap <leader><C-w> :tabclose!<CR>
 nmap <leader>W :tabo<CR>
 nmap <leader><C-W> :tabo!<CR>
@@ -50,8 +49,14 @@ nmap <leader>! :ConqueTerm sh<CR>
 
 
 nnoremap <leader>r <C-w>
-nmap <leader>rt gt
-nmap <leader>rT gT
+nnoremap <leader>rt gt
+nnoremap <leader>rT gT
+nnoremap <C-t> gt
+nnoremap <C-T> gT
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 nmap <leader>ssh :leftabove vsplit<CR>
 nmap <leader>ssj :rightbelow split<CR>

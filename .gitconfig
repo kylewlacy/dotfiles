@@ -29,6 +29,7 @@
 	cc = commit -a -m 
 	
 	d = diff
+  dd = diff --no-ext-diff
 	dc = diff --check
 	dl = diff HEAD~1
 	
@@ -43,8 +44,12 @@
 	clg = "!source ~/.gitscripts/clone-github.sh"
 [core]
 	editor = vim
-	excludesfile = /Users/kyle/.gitignore
+	excludesfile = ~/.gitignore
 [color]
 	ui = true
-; [diff]
-; 	tool = vimdiff
+[diff]
+  external = ~/.gitscripts/diff-wrapper.sh
+[pager]
+  diff =
+[merge]
+	tool = vimdiff

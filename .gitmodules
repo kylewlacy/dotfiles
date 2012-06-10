@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/conque"]
 	path = .vim/bundle/conque
 	url = git://github.com/rygwdn/vim-conque.git
+[submodule "/Users/kyle/.vim/bundle/cocoa.vim"]
+	path = /Users/kyle/.vim/bundle/cocoa.vim
+	url = git://github.com/msanders/cocoa.vim.git
