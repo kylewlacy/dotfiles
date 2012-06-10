@@ -75,6 +75,17 @@ nmap <leader>dj :botright new<CR>
 nmap <leader>dk :topleft new<CR>
 nmap <leader>dl :botright vnew<CR>
 
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
 autocmd VimEnter * :call Plugins()
 function Plugins()
   if exists(":CommandT")
