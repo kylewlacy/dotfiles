@@ -8,7 +8,7 @@ git checkout cb8cdf
 cd ..
 patch -p1 < breakindent/breakindent.patch
 cd src
-./configure --with-features=huge --enable-rubyinterp --enable-python-interp --enable-perlinterp --enable-cscope
+./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope
 make
 make install
 cd ..
