@@ -49,10 +49,8 @@ nmap <leader>! :ConqueTerm sh<CR>
 
 
 nnoremap <leader>r <C-w>
-nnoremap <leader>rt gt
-nnoremap <leader>rT gT
 nnoremap <C-t> gt
-nnoremap <C-T> gT
+nnoremap <C-w> gT
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
