@@ -1,5 +1,3 @@
-" The .vimrc file
-" For dependencies and the like, see the README file
 set linebreak
 set expandtab
 set autoindent
@@ -10,6 +8,7 @@ set number
 set clipboard=unnamed
 set backspace=2
 set t_Co=256
+set wildmenu
 if exists("&breakindent")
   set breakindent
 endif
@@ -44,9 +43,6 @@ nmap <leader>e :CommandT<CR>
 nmap <leader>v ^v$
 map !! <ESC>:! 
 nmap <leader>! :ConqueTerm sh<CR>
-" noremap ' `
-" nnoremap ` '
-
 
 nnoremap <leader>r <C-w>
 nnoremap <C-t> gt
@@ -85,7 +81,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 autocmd VimEnter * :call Plugins()
-function Plugins()
+function! Plugins()
   if exists(":CommandT")
     let g:CommandTAlwaysShowDotFiles=1
     let g:CommandTScanDotDirectories=1
