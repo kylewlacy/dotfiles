@@ -39,7 +39,7 @@ vnoremap <leader>a 0
 nnoremap <leader>f $
 vnoremap <leader>f $
 nnoremap <leader><CR> :set nohlsearch!<CR>
-nmap <leader>e :CommandT<CR>
+nmap <leader>e :CommandTFlush<CR>:CommandT<CR>
 nmap <leader>v ^v$
 map !! <ESC>:! 
 nmap <leader>! :ConqueTerm sh<CR>
@@ -85,6 +85,8 @@ function! Plugins()
   if exists(":CommandT")
     let g:CommandTAlwaysShowDotFiles=1
     let g:CommandTScanDotDirectories=1
-    set wildignore=".git/**,.Trash/**,.DS_Store,*.swp"
+    let g:CommandTMaxHeight=15
+    let g:CommandTCancelMap=['<C-c>', '<Esc>']
+    set wildignore+=.git/**,.Trash/**,.DS_Store,*.swp
   endif
 endfunction
