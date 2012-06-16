@@ -34,8 +34,8 @@ nmap <leader>T :tab split<CR>
 nmap <leader><C-w> :tabclose!<CR>
 nmap <leader>W :tabo<CR>
 nmap <leader><C-W> :tabo!<CR>
-nnoremap <leader>a 0
-vnoremap <leader>a 0
+nnoremap <leader>a ^
+vnoremap <leader>a ^
 nnoremap <leader>f $
 vnoremap <leader>f $
 nnoremap <leader><CR> :set nohlsearch!<CR>
