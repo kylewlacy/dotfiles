@@ -52,6 +52,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+nnoremap = <C-w>=
+nnoremap - <C-w>-
+nnoremap + <C-w>>
+nnoremap _ <C-w><
 
 nmap <leader>ssh :leftabove vsplit<CR>
 nmap <leader>ssj :rightbelow split<CR>
