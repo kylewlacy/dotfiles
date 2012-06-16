@@ -27,6 +27,7 @@ endif
 
 let mapleader = " "
 map <leader><leader> i_<ESC>r
+map <leader><S-Space> a_<ESC>r
 map <leader>y :w !pbcopy<CR><CR>
 map <leader>p :r !pbpaste<CR>
 map <leader>t :tabnew<CR>
