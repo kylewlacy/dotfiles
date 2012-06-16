@@ -43,7 +43,8 @@ nnoremap <leader><CR> :set nohlsearch!<CR>
 nmap <leader>e :CommandTFlush<CR>:CommandT<CR>
 nmap <leader>v ^v$
 map !! <ESC>:! 
-nmap <leader>! :ConqueTerm sh<CR>
+nmap <leader>1 :ConqueTerm sh<CR>
+nmap <leader>! :tabnew<CR>:ConqueTerm sh<CR>
 
 nnoremap <leader>r <C-w>
 nnoremap <C-t> gt
