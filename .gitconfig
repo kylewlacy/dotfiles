@@ -45,7 +45,7 @@
 	clg = "!source ~/.gitscripts/clone-github.sh"
 [core]
 	editor = vim
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/kyle/.gitignore
 [color]
 	ui = true
 [diff]
