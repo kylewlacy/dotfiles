@@ -11,6 +11,7 @@
 	s = status
   ss = "status -uno"
 	co = checkout
+  restore = checkout --
 	aa = "add --all"
   au = "add -u"
   aas = "!git add --all && git status"
