@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf ./vim
 git clone git://github.com/b4winckler/vim.git
 cd vim
 git checkout ad56835
@@ -11,5 +12,3 @@ cd src
 ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope
 make
 make install
-cd ..
-rm -rf ./vim
