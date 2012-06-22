@@ -10,3 +10,6 @@
 [submodule "/Users/kyle/.vim/bundle/cocoa.vim"]
 	path = /Users/kyle/.vim/bundle/cocoa.vim
 	url = git://github.com/msanders/cocoa.vim.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = /Users/kyle/.oh-my-zsh
