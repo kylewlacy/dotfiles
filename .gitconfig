@@ -35,15 +35,15 @@
 	dc = diff --check
 	dl = diff HEAD~1
 	
-	l = "!source ~/.gitscripts/log.sh"
+	l = "!source ~/.scripts/git/log.sh"
 	ls = !git l --stat --color
-  ll = "!source ~/.gitscripts/log-extended.sh"
-	lf = "!source ~/.gitscripts/log-details.sh"
+  ll = "!source ~/.scripts/git/log-extended.sh"
+	lf = "!source ~/.scripts/git/log-details.sh"
 	ld = !git lf -n1
-	lt = "!source ~/.gitscripts/log-tree.sh"
+	lt = "!source ~/.scripts/git/log-tree.sh"
 		
 	cl = clone
-	clg = "!source ~/.gitscripts/clone-github.sh"
+	clg = "!source ~/.scripts/git/clone-github.sh"
 [core]
 	editor = vim
 	excludesfile = /Users/kyle/.gitignore
