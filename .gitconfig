@@ -50,7 +50,7 @@
 [color]
 	ui = true
 [diff]
-  external = ~/.gitscripts/diff-wrapper.sh
+  external = ~/.scripts/git/diff-wrapper.sh
 [pager]
   diff =
 [merge]
