@@ -1,4 +1,5 @@
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
+[[ -s "/Users/kyle/.rvm/scripts/rvm" ]] && source "/Users/kyle/.rvm/scripts/rvm"
 
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM="~/.zsh"
