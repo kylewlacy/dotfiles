@@ -1,9 +1,9 @@
 ZSH=$HOME/.oh-my-zsh
-
-ZSH_THEME="dpoggi"
 ZSH_CUSTOM="~/.zsh"
-DISABLE_AUTO_TITLE="true"
-COMPLETION_WAITING_DOTS="true"
-plugins=(git ruby osx lol nyan)
-
+plugins=(git ruby osx lol nyan vi-mode)
+ZSH_THEME="dpoggi"
 source $ZSH/oh-my-zsh.sh
+
+DISABLE_AUTO_TITLE="true"
+bindkey -v
+set -o vi
