@@ -1,3 +1,5 @@
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM="~/.zsh"
 plugins=(git ruby osx lol nyan vi-mode)
