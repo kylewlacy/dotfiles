@@ -12,6 +12,7 @@ set number
 set clipboard=unnamed
 set backspace=2
 set t_Co=256
+set showcmd
 set wildmenu
 if exists("&breakindent")
   set breakindent
