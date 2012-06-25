@@ -11,7 +11,15 @@ DISABLE_AUTO_TITLE="true"
 bindkey -v
 set -o vi
 
-bindkey "^W" backward-kill-word    # vi-backward-kill-word
-bindkey "^H" backward-delete-char  # vi-backward-delete-char
-bindkey "^U" backward-kill-line    # vi-kill-line
-bindkey "^?" backward-delete-char  # vi-backward-delete-char
+bindkey "^W" backward-kill-word
+bindkey "^H" backward-delete-char
+bindkey "^U" backward-kill-line
+bindkey "^?" backward-delete-char
+
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
