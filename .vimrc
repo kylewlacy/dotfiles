@@ -2,6 +2,8 @@ set linebreak
 set expandtab
 set autoindent
 set smartindent
+set hlsearch
+set incsearch
 set shiftwidth=2
 set tabstop=2
 set number
