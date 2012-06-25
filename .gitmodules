@@ -19,3 +19,12 @@
 [submodule ".vim/bundle/vim-haml"]
 	path = .vim/bundle/vim-haml
 	url = git://github.com/tpope/vim-haml.git
+[submodule ".build/git"]
+	path = .build/git
+	url = git://github.com/git/git.git
+[submodule ".build/vim"]
+	path = .build/vim
+	url = git://github.com/b4winckler/vim
+[submodule ".build/zsh"]
+	path = .build/zsh
+	url = git://zsh.git.sf.net/gitroot/zsh/zsh
