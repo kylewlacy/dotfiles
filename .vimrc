@@ -43,7 +43,7 @@ nnoremap <leader>a ^
 vnoremap <leader>a ^
 nnoremap <leader>f $
 vnoremap <leader>f $
-nnoremap <leader><CR> :set nohlsearch!<CR>
+nnoremap <CR> :set nohlsearch!<CR>
 nmap <leader>e :CommandTFlush<CR>:CommandT<CR>
 nmap <leader>v ^v$
 map !! <ESC>:! 
