@@ -1,5 +1,5 @@
 set nocompatible
-set hidden
+set nohidden
 set linebreak
 set expandtab
 set autoindent
