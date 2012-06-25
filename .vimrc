@@ -14,6 +14,9 @@ set backspace=2
 set t_Co=256
 set showcmd
 set wildmenu
+set backup
+set backupdir=~/.vim/tmp,/var/tmp,/tmp
+set directory=~/.vim-tmp,/var/tmp,/tmp
 if exists("&breakindent")
   set breakindent
 endif
