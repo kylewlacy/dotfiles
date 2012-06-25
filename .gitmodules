@@ -1,15 +1,15 @@
-[submodule "/Users/kyle/.vim/bundle/snipmate.vim"]
-	path = /Users/kyle/.vim/bundle/snipmate.vim
+[submodule ".vim/bundle/snipmate.vim"]
+	path = .vim/bundle/snipmate.vim
 	url = git://github.com/nsanders/snipmate.vim.git
-[submodule "/Users/kyle/.vim/bundle/command-t"]
-	path = /Users/kyle/.vim/bundle/command-t
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
 	url = git://github.com/wincent/Command-T.git
 [submodule ".vim/bundle/conque"]
 	path = .vim/bundle/conque
 	url = git://github.com/rygwdn/vim-conque.git
-[submodule "/Users/kyle/.vim/bundle/cocoa.vim"]
-	path = /Users/kyle/.vim/bundle/cocoa.vim
+[submodule ".vim/bundle/cocoa.vim"]
+	path = .vim/bundle/cocoa.vim
 	url = git://github.com/msanders/cocoa.vim.git
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
-	url = /Users/kyle/.oh-my-zsh
+	url = .oh-my-zsh
