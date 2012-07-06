@@ -25,11 +25,10 @@ call pathogen#infect()
 syntax on
 color twilight256
 filetype plugin indent on
-highlight LineNr ctermfg=DarkGrey guifg=DarkGrey
 if has("gui_running")
   set guioptions=egmt
   set guifont=Monaco:h18
-  set transparency=5
+  set transparency=0
   color twilight
 endif
 
