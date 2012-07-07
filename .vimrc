@@ -31,6 +31,7 @@ if has("gui_running")
   set transparency=0
   color twilight
 endif
+set statusline=%t\ %m%w%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
 
 let mapleader = " "
 map <leader><leader> i_<ESC>r
@@ -102,4 +103,37 @@ function! Plugins()
     let g:CommandTCancelMap=['<C-c>', '<Esc>']
     set wildignore+=.git/**,.Trash/**,.DS_Store,*.swp
   endif
+endfunction
+
+function! FileSize()
+  let bytes= getfsize(expand("%:p"))
+  let prefix=" bytes"
+  if bytes > 1024
+    let bytes = bytes/1024
+    let prefix = "KB"
+  endif
+  if bytes > 1024
+    let bytes = bytes/1024
+    let prefix = "MB"
+  endif
+  if bytes > 1024
+    let bytes = bytes/1024
+    let prefix = "GB"
+  endif
+  return bytes . prefix
+endfunction
+
+function! CharacterCount()
+  let characters= getfsize(expand("%:p"))
+  if characters > 10000
+    return (characters/1000) . "k"
+  endif
+  return characters
+endfunction
+
+function! CharacterInfo()
+  if getfsize(expand("%:p")) < 0
+    return ""
+  endif
+  return " | " . CharacterCount() . " chars (" . FileSize() . ")"
 endfunction
