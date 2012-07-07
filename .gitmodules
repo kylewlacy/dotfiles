@@ -34,3 +34,6 @@
 [submodule ".build/macvim"]
 	path = .build/macvim
 	url = git://github.com/b4winckler/macvim.git
+[submodule ".build/patches/vim/breakindent"]
+	path = .build/patches/vim/breakindent
+	url = git://gist.github.com/1677076.git
