@@ -31,3 +31,6 @@
 [submodule ".vim/bundle/vim-rooter"]
 	path = .vim/bundle/vim-rooter
 	url = git://github.com/airblade/vim-rooter.git
+[submodule ".build/macvim"]
+	path = .build/macvim
+	url = git://github.com/b4winckler/macvim.git
