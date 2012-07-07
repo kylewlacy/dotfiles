@@ -4,7 +4,7 @@ options="--with-features=huge --enable-rubyinterp --enable-pythoninterp --enable
 
 cd vim && patch -p1 < $breakindent
 cd src
-./configure "$options"
+./configure $options
 make && make install && make clean
 cd ..
 patch -R -p1 < $breakindent && git clean -fd && git checkout --
@@ -15,11 +15,11 @@ if [[ "$OSTYPE" == darwin* ]]; then
   cd macvim && patch -p1 < $breakindent
   cd src
   curl -o tmp.zip "$zipfile" && unzip tmp.zip VimIcon/MacVim.icns -d tmp && cp tmp/VimIcon/MacVim.icns MacVim/icons/MacVim.icns && rm -r tmp/ tmp.zip
-  ./configure "$options"
+  ./configure $options
   make
   rm -r /Applications/MacVim.app
   cp -R  MacVim/build/Release/MacVim.app /Applications/MacVim.app
   make clean
   cd ..
-  patch -R -p1 < $breakindent && git clean -fd && git checkout --
+  patch -R -p1 < $breakindent && git clean -fd && git reset --hard
 fi
