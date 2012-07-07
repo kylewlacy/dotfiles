@@ -37,3 +37,6 @@
 [submodule ".build/patches/vim/breakindent"]
 	path = .build/patches/vim/breakindent
 	url = git://gist.github.com/1677076.git
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
