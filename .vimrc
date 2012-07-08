@@ -21,6 +21,7 @@ if exists("&breakindent")
   set breakindent
 endif
 call pathogen#infect()
+Helptags
 
 syntax on
 color twilight256
@@ -31,36 +32,40 @@ if has("gui_running")
   set transparency=0
   color twilight
 endif
+set laststatus=2
 set statusline=%t\ %m%w%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
 
 let mapleader = " "
 map <leader><leader> i_<ESC>r
 map <leader><S-Space> a_<ESC>r
-map <leader>y :w !pbcopy<CR><CR>
-map <leader>p :r !pbpaste<CR>
 map <leader>t :tabnew<CR>
 nmap <leader>T :tab split<CR>
 nmap <leader><C-w> :tabclose!<CR>
 nmap <leader>W :tabo<CR>
 nmap <leader><C-W> :tabo!<CR>
-nnoremap <leader>a ^
-vnoremap <leader>a ^
-nnoremap <leader>f $
-vnoremap <leader>f $
-nnoremap <CR> :set nohlsearch!<CR>
+noremap <leader>a ^
+noremap <leader>f $
+nnoremap <S-CR> :set nohlsearch!<CR>
 nmap <leader>e :CommandTFlush<CR>:CommandT<CR>
 nmap <leader>v ^v$
 map !! <ESC>:! 
-nmap <leader>1 :ConqueTerm sh<CR>
-nmap <leader>! :tabnew<CR>:ConqueTerm sh<CR>
+nmap <leader>1 :exec ":ConqueTerm " . $SHELL<CR>
+nmap <leader>! :tabnew<CR>:exec ":ConqueTerm " . $SHELL<CR>
+autocmd Filetype help nnoremap <CR> <C-]>
 
 nnoremap <leader>r <C-w>
 nnoremap <C-t> gt
+inoremap <C-t> <ESC>gt
 nnoremap <C-w> gT
+inoremap <C-w> <ESC>gT
 nnoremap <C-h> <C-w>h
+inoremap <C-h> <ESC><C-w>h
 nnoremap <C-j> <C-w>j
+inoremap <C-j> <ESC><C-w>j
 nnoremap <C-k> <C-w>k
+inoremap <C-k> <ESC><C-w>k
 nnoremap <C-l> <C-w>l
+inoremap <C-l> <ESC><C-w>l
 nnoremap = <C-w>+
 nnoremap - <C-w>-
 nnoremap + <C-w>>
@@ -124,7 +129,7 @@ function! FileSize()
 endfunction
 
 function! CharacterCount()
-  let characters= getfsize(expand("%:p"))
+  let characters=getfsize(expand("%:p"))
   if characters > 10000
     return (characters/1000) . "k"
   endif
@@ -132,8 +137,12 @@ function! CharacterCount()
 endfunction
 
 function! CharacterInfo()
-  if getfsize(expand("%:p")) < 0
+  let characters=getfsize(expand("%:p"))
+  if characters < 0
     return ""
+  endif
+  if characters < 1024
+    return " | " . CharacterCount() . " chars"
   endif
   return " | " . CharacterCount() . " chars (" . FileSize() . ")"
 endfunction
