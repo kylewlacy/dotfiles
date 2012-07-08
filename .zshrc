@@ -4,7 +4,7 @@ export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh
 plugins=(git ruby osx lol nyan vi-mode)
-ZSH_THEME="dpoggi"
+ZSH_THEME="twilight"
 source $ZSH/oh-my-zsh.sh
 
 DISABLE_AUTO_TITLE="true"
