@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-snipmate_snippets"]
 	path = .vim/bundle/vim-snipmate_snippets
 	url = git://github.com/honza/snipmate-snippets.git
+[submodule ".build/patches/vim/mvim"]
+	path = .build/patches/vim/mvim
+	url = git://gist.github.com/3080651.git

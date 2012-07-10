@@ -24,4 +24,8 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+if [ -f /usr/local/bin/mvim ]; then
+  alias vim="mvim -v --remote-tab-silent"
+  alias vimdiff="mvim -v -d --remote-tab-silent"
+fi
 alias less="less -FXRS"
