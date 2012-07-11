@@ -99,6 +99,7 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
+autocmd Filetype ruby Rvm
 autocmd VimEnter * :call Plugins()
 function! Plugins()
   if exists(":CommandT")
