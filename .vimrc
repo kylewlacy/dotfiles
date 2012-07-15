@@ -33,7 +33,7 @@ if has("gui_running")
   color twilight
 endif
 set laststatus=2
-set statusline=%t\ %m%w%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
+set statusline=%t\ %m%w%r%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
 
 let mapleader = " "
 map <leader><leader> i_<ESC>r
