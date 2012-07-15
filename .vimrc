@@ -147,3 +147,15 @@ function! CharacterInfo()
   endif
   return " | " . CharacterCount() . " chars (" . FileSize() . ")"
 endfunction
+
+function! CheckSwap()
+  swapname
+  if v:statusmsg =~ '\.sw[^p]$'
+    set ro
+  endif
+endfunc
+
+if &swf
+  set shm+=A
+  au BufReadPre * call CheckSwap()
+endif
