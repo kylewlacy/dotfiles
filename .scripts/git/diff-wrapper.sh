@@ -1,2 +1,2 @@
 #!/bin/bash
-vimdiff "$2" "$5"
+vimdiff "$5" "$2"
