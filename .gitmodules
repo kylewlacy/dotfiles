@@ -34,15 +34,6 @@
 [submodule ".vim/bundle/vim-surround"]
 	path = .vim/bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
-[submodule ".vim/bundle/vim-snipmate"]
-	path = .vim/bundle/vim-snipmate
-	url = git://github.com/garbas/vim-snipmate.git
-[submodule ".vim/bundle/vim-snipmate_tlib-vim"]
-	path = .vim/bundle/vim-snipmate_tlib-vim
-	url = git://github.com/tomtom/tlib_vim.git
-[submodule ".vim/bundle/vim-snipmate_mw-utils"]
-	path = .vim/bundle/vim-snipmate_mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule ".build/patches/vim/mvim"]
 	path = .build/patches/vim/mvim
 	url = git://gist.github.com/3080651.git
