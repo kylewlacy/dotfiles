@@ -88,16 +88,8 @@ nmap <leader>dj :botright new<CR>
 nmap <leader>dk :topleft new<CR>
 nmap <leader>dl :botright vnew<CR>
 
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>\<c-x>\<c-o>"
-    endif
-endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
+let g:SuperTabDefaultCompletionType = "<c-p>"
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 autocmd Filetype ruby Rvm
 autocmd VimEnter * :call Plugins()
