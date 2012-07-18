@@ -19,6 +19,7 @@ set backupdir=~/.vim/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,/var/tmp,/tmp
 if exists("&breakindent")
   set breakindent
+  set breakindentshift=2
 endif
 call pathogen#infect()
 Helptags
