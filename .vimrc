@@ -19,7 +19,7 @@ set backupdir=~/.vim/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,/var/tmp,/tmp
 if exists("&breakindent")
   set breakindent
-  set breakindentshift=2
+  autocmd VimEnter * set breakindentshift=2
 endif
 call pathogen#infect()
 Helptags
@@ -34,7 +34,7 @@ if has("gui_running")
   color twilight
 endif
 set laststatus=2
-set statusline=%t\ %m%w%r%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
+set statusline=%f\ %m%w%r%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
 
 let mapleader = " "
 map <leader><leader> i_<ESC>r
