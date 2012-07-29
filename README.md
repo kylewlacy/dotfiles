@@ -5,10 +5,11 @@ These are my dotfiles; pretty standard stuff. This setup of dotfiles is based on
 Tools
 -----
 This setup has been developed and tested with the following tools in mind:
-- Mac OS X (10.7.4)
-- Terminal.app
-- Git (1.7.7.5, Apple Git-26)
-- Vim (7.3, custom build)
+- Mac OS X (10.8)
+- Terminal.app (with TotalTerminal)
+- Git (1.7.11.1.29.gf71be5c)
+- Vim (7.3.531; with breakindent)
+
 Install the latest tested versions of each tool (compiled from source, of course) by running the scripts found in ~/.build/
 
 Reinstallation
