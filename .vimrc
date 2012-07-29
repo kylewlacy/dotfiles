@@ -36,6 +36,9 @@ endif
 set laststatus=2
 set statusline=%f\ %m%w%r%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
 
+noremap j gj
+noremap k gk
+
 let mapleader = " "
 map <leader><leader> i_<ESC>r
 map <leader><S-Space> a_<ESC>r
