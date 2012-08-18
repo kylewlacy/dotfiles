@@ -19,7 +19,8 @@ set backupdir=~/.vim/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,/var/tmp,/tmp
 if exists("&breakindent")
   set breakindent
-  autocmd VimEnter * set breakindentshift=2
+  autocmd VimEnter,GUIEnter,BufNewFile,BufRead * set breakindentshift=2
+  set breakindentshift=2
 endif
 call pathogen#infect()
 Helptags
