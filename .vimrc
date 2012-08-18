@@ -96,6 +96,7 @@ let g:SuperTabDefaultCompletionType = "<c-p>"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
 autocmd Filetype ruby Rvm
+autocmd Filetype asm set commentstring=;\ %s
 autocmd VimEnter * :call Plugins()
 function! Plugins()
   if exists(":CommandT")
