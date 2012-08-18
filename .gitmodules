@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/AutoCloseTag"]
 	path = .vim/bundle/AutoCloseTag
 	url = git://github.com/vim-scripts/HTML-AutoCloseTag.git
+[submodule ".vim/bundle/applescript.vim"]
+	path = .vim/bundle/applescript.vim
+	url = git://github.com/vim-scripts/applescript.vim.git
