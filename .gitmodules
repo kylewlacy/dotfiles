@@ -55,3 +55,6 @@
 [submodule ".vim/bundle/applescript.vim"]
 	path = .vim/bundle/applescript.vim
 	url = git://github.com/vim-scripts/applescript.vim.git
+[submodule ".build/ruby"]
+	path = .build/ruby
+	url = git://github.com/ruby/ruby.git

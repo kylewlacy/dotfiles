@@ -1,5 +1,4 @@
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
-[[ -s "/Users/kyle/.rvm/scripts/rvm" ]] && source "/Users/kyle/.rvm/scripts/rvm"
 
 export DISABLE_AUTO_UDPATE=true
 ZSH=$HOME/.oh-my-zsh
