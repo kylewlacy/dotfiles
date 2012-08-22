@@ -65,8 +65,6 @@ nnoremap <S-CR> :set nohlsearch!<CR>
 nmap <leader>e :CommandTFlush<CR>:CommandT<CR>
 nmap <leader>v ^v$
 map !! <ESC>:!
-nmap <leader>1 :exec ":ConqueTerm " . $SHELL<CR>
-nmap <leader>! :tabnew<CR>:exec ":ConqueTerm " . $SHELL<CR>
 autocmd Filetype help nnoremap <CR> <C-]>
 
 nnoremap <leader>r <C-w>
