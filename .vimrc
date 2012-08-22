@@ -6,6 +6,8 @@ set autoindent
 set smartindent
 set hlsearch
 set incsearch
+set smartcase
+set ignorecase
 set shiftwidth=2
 set tabstop=2
 set number
@@ -38,8 +40,13 @@ endif
 set laststatus=2
 set statusline=%f\ %m%w%r%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
 set listchars=tab:▸\ ,trail:･
+
 highlight NonText guifg=#4a4a59 ctermfg=239
 highlight SpecialKey guifg=#4a4a59 ctermfg=239
+highlight Pmenu term=none ctermfg=236 ctermbg=251 gui=none guifg=#303030 guibg=#c6c6c6
+highlight PmenuSel term=none ctermfg=251 ctermbg=236 gui=none guifg=#c6c6c6 guibg=#303030
+highlight PmenuSbar ctermbg=251 guibg=#c6c6c6
+highlight PmenuThumb ctermbg=234 guibg=#1c1c1c
 
 noremap j gj
 noremap k gk
@@ -57,7 +64,7 @@ noremap <leader>f $
 nnoremap <S-CR> :set nohlsearch!<CR>
 nmap <leader>e :CommandTFlush<CR>:CommandT<CR>
 nmap <leader>v ^v$
-map !! <ESC>:! 
+map !! <ESC>:!
 nmap <leader>1 :exec ":ConqueTerm " . $SHELL<CR>
 nmap <leader>! :tabnew<CR>:exec ":ConqueTerm " . $SHELL<CR>
 autocmd Filetype help nnoremap <CR> <C-]>
