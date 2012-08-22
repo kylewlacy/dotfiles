@@ -15,6 +15,7 @@ set t_Co=256
 set showcmd
 set wildmenu
 set backup
+set list
 set backupdir=~/.vim/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,/var/tmp,/tmp
 if exists("&breakindent")
@@ -36,6 +37,9 @@ if has("gui_running")
 endif
 set laststatus=2
 set statusline=%f\ %m%w%r%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
+set listchars=tab:▸\ ,trail:･
+highlight NonText guifg=#4a4a59 ctermfg=239
+highlight SpecialKey guifg=#4a4a59 ctermfg=239
 
 noremap j gj
 noremap k gk
