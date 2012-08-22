@@ -1,6 +1,7 @@
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 
 export DISABLE_AUTO_UDPATE=true
+export EDITOR="mvim -v"
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh
 plugins=(git ruby osx lol nyan vi-mode)
