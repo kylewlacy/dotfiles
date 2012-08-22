@@ -13,9 +13,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
   curl -o tmp.zip "$zipfile" && unzip tmp.zip VimIcon/MacVim.icns -d tmp && cp tmp/VimIcon/MacVim.icns MacVim/icons/MacVim.icns && rm -r tmp/ tmp.zip
   ./configure $options
   make
-  rm -r "$app"
-  cp -R MacVim/build/Release/MacVim.app "$app"
-  mv MacVim/mvim "$usr"
+  sudo rm -r "$app"
+  cp -Rf MacVim/build/Release/MacVim.app "$app"
+  sudo mv -f MacVim/mvim "$usr"
   make clean
   cd ..
   git clean -fd && git reset --hard
