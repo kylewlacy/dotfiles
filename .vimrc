@@ -100,7 +100,6 @@ nmap <leader>dl :botright vnew<CR>
 let g:SuperTabDefaultCompletionType = "<c-p>"
 let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
 
-autocmd Filetype ruby Rvm
 autocmd Filetype asm set commentstring=;\ %s
 autocmd VimEnter * :call Plugins()
 function! Plugins()
