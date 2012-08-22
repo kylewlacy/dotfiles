@@ -22,8 +22,8 @@
 	amend = commit --amend
   undo = reset --hard
   history = reflog show HEAD
-  untrack = reset HEAD
-  unstage = rm --cached
+  unstage = reset HEAD
+  untrack = rm --cached
   cld = "!for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done"
 	c = commit
 	ca = commit -a
