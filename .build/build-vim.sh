@@ -10,7 +10,10 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
   cd macvim && patch -p1 < $breakindent && patch src/MacVim/mvim < $mvim
   cd src
-  curl -o tmp.zip "$zipfile" && unzip tmp.zip VimIcon/MacVim.icns -d tmp && cp tmp/VimIcon/MacVim.icns MacVim/icons/MacVim.icns && rm -r tmp/ tmp.zip
+  curl -o tmp.zip "$zipfile" && unzip tmp.zip VimIcon/MacVim.icns -d tmp
+  cp -fv tmp/VimIcon/MacVim.icns MacVim/icons/MacVim.icns
+  open MacVim/icons/MacVim.icns
+  rm -r tmp/ tmp.zip
   ./configure $options
   make
   sudo rm -r "$app"
