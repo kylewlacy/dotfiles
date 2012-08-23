@@ -45,7 +45,7 @@
 	cl = clone
 	clg = "!source ~/.scripts/git/clone-github.sh"
 [core]
-	excludesfile = /Users/kyle/.gitignore
+	excludesfile = /Users/kyle/.gitignore_global
 [color]
 	ui = true
 [diff]

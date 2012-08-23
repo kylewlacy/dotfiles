@@ -20,6 +20,8 @@ set backup
 set list
 set backupdir=~/.vim/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,/var/tmp,/tmp
+set exrc
+set nosecure
 if exists("&breakindent")
   set breakindent
   autocmd VimEnter,GUIEnter,BufNewFile,BufRead * set breakindentshift=2
