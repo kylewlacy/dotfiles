@@ -1,5 +1,8 @@
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 
+if [ -f "$HOME/.certs/cacert.pem" ]; then
+  export GIT_SSL_CAINFO="$HOME/.certs/cacert.pem"
+fi
 export DISABLE_AUTO_UDPATE=true
 export EDITOR="mvim -v"
 ZSH=$HOME/.oh-my-zsh
