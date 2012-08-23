@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$UID" != "0" ]; then
+  sudo $0
+fi
+
 breakindent=../patches/vim/breakindent/breakindent.patch
 options="--with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-perlinterp --enable-cscope"
 
@@ -13,12 +17,12 @@ if [[ "$OSTYPE" == darwin* ]]; then
     cd src
     curl -o tmp.zip "$zipfile" && unzip tmp.zip VimIcon/MacVim.icns -d tmp
     cp -fv tmp/VimIcon/MacVim.icns MacVim/icons/MacVim.icns
-    rm -r tmp/ tmp.zip
+    rm -rf tmp/ tmp.zip
     ./configure $options
     make
-    sudo rm -r "$app"
+    rm -rf "$app"
     cp -Rf MacVim/build/Release/MacVim.app "$app"
-    sudo mv -f MacVim/mvim "$usr"
+    mv -f MacVim/mvim "$usr"
     make clean
     cd ..
     git clean -fd && git reset --hard
@@ -30,8 +34,8 @@ if [[ "$1" == --vim ]]; then
   cd vim && patch -p1 < $breakindent
   cd src
   ./configure $options
-  sudo make && sudo make install && make clean
+  make && make install && make clean
   cd ..
-  sudo git clean -fd && git reset --hard
+  git clean -fd && git reset --hard
   cd ..
 fi
