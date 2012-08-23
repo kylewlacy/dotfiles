@@ -3,3 +3,4 @@
 *.swn
 *.swo
 .vimrc
+vendor/**
