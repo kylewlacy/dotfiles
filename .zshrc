@@ -1,4 +1,9 @@
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
+if [[ "$OSTYPE" == darwin* && -f "/etc/zshenv" && ! -f "/etc/zprofile" ]]; then
+  # This fixes ZSH paths for MacVim
+  # From http://stackoverflow.com/a/7382033/1311454
+  sudo mv "/etc/zshenv" "/etc/zprofile"
+fi
 
 if [ -f "$HOME/.certs/cacert.pem" ]; then
   export GIT_SSL_CAINFO="$HOME/.certs/cacert.pem"
