@@ -1,2 +1,2 @@
 #!/bin/bash
-vimdiff "$5" "$2"
+$EDITOR -d "$5" "$2"
