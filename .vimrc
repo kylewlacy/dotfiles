@@ -104,8 +104,8 @@ nmap <leader>dj :botright new<CR>
 nmap <leader>dk :topleft new<CR>
 nmap <leader>dl :botright vnew<CR>
 
-let g:SuperTabDefaultCompletionType = "<c-p>"
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+" let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+" let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 autocmd Filetype asm set commentstring=;\ %s
 autocmd VimEnter * :call Plugins()
