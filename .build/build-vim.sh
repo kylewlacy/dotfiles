@@ -30,7 +30,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 # TODO: Fix building CLI Vim in OS X with Ruby support
-if [[ "$1" == --vim ]]; then
+if [[ "$1" == --vim || "$OSTYPE" != *darwin* ]]; then
   cd vim && patch -p1 < $breakindent
   cd src
   ./configure $options
