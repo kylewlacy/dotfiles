@@ -31,17 +31,22 @@ call pathogen#infect()
 Helptags
 
 syntax on
-color twilight256
 filetype plugin indent on
 if has("gui_running")
   set guioptions=egmt
   set guifont=Monaco:h18
-  set transparency=0
+  if exists("&transparency")
+    set transparency=0
+  endif
+
+  set listchars=tab:▸\ ,trail:･
   color twilight
+else
+  set listchars=tab:>\ ,trail:.
+  color twilight256
 endif
 set laststatus=2
 set statusline=%f\ %m%w%r%=%y%{CharacterInfo()}\ \|\ line\ %l\/%L%<
-set listchars=tab:▸\ ,trail:･
 
 highlight NonText guifg=#4a4a59 ctermfg=239
 highlight SpecialKey guifg=#4a4a59 ctermfg=239
