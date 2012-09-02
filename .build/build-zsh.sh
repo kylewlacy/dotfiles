@@ -1,4 +1,8 @@
 #!/bin/bash
+if [ "$UID" != "0" ]; then
+  sudo $0
+fi
+
 cd zsh
 ./Util/preconfig && ./configure
 make && make install
