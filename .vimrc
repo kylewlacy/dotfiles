@@ -113,6 +113,7 @@ nmap <leader>dl :botright vnew<CR>
 " let g:SuperTabContextDefaultCompletionType = "<c-n>"
 
 autocmd Filetype asm set commentstring=;\ %s
+autocmd Filetype gitconfig set noexpandtab
 autocmd VimEnter * :call Plugins()
 function! Plugins()
   if exists(":CommandT")
