@@ -39,4 +39,13 @@ if [ -f $mvim ]; then
   alias vimdiff="$mvim -v -d"
   alias mvim="$mvim --remote-tab-silent"
 fi
+if [ -f "/sys/class/thermal/thermal_zone0/temp" ]; then
+  temp="/sys/class/thermal/thermal_zone0/temp"
+elif [ -f "/proc/acpi/thermal_zone/THRM/temperature" ]; then
+  temp="/proc/acpi/thermal_zone/THRM/temperature"
+fi
+
+if [ -n "$temp" ]; then
+  alias temp="echo \"$(cat /sys/class/thermal/thermal_zone0/temp | sed 's/.\{3\}$//') *C\""
+fi
 alias less="less -FXRS"
