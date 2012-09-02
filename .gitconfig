@@ -9,48 +9,49 @@
 [alias]
 	h = help
 	s = status
-  ss = "status -uno"
+	ss = "status -uno"
 	co = checkout
-  restore = checkout --
+	restore = checkout --
 	aa = "add --all"
-  au = "add -u"
-  aas = "!git add --all && git status"
-  aus = "!git add --all && git status"
-  df = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
-  fa = fetch --all
+	au = "add -u"
+	aas = "!git add --all && git status"
+	aus = "!git add --all && git status"
+	fa = fetch --all
 	man = help
 	amend = commit --amend
-  undo = reset --hard
-  history = reflog show HEAD
-  unstage = reset HEAD
-  untrack = rm --cached
-  cld = "!for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done"
+	undo = reset --hard
+	history = reflog show HEAD
+	unstage = reset HEAD
+	untrack = rm --cached
+	cld = "!for i in `git status | grep deleted | awk '{print $3}'`; do git rm $i; done"
 	c = commit
 	ca = commit -a
 	cm = commit -m
 	cc = commit -a -m 
 	
 	d = diff
-  dd = diff --no-ext-diff
+	dd = diff --no-ext-diff
 	dc = diff --check
 	dl = diff HEAD~1
-	
+
 	l = "!source ~/.scripts/git/log.sh"
 	ls = !git l --stat --color
-  ll = "!source ~/.scripts/git/log-extended.sh"
+	ll = "!source ~/.scripts/git/log-extended.sh"
 	lf = "!source ~/.scripts/git/log-details.sh"
 	ld = !git lf -n1
 	lt = "!source ~/.scripts/git/log-tree.sh"
-		
+
 	cl = clone
 	clg = "!source ~/.scripts/git/clone-github.sh"
+
+	df = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
 [core]
 	excludesfile = /Users/kyle/.gitignore_global
 [color]
 	ui = true
 [diff]
-  external = ~/.scripts/git/diff-wrapper.sh
+	external = ~/.scripts/git/diff-wrapper.sh
 [pager]
-  diff =
+	diff =
 [merge]
 	tool = vimdiff
