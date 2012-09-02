@@ -9,7 +9,6 @@ if [ -f "$HOME/.certs/cacert.pem" ]; then
   export GIT_SSL_CAINFO="$HOME/.certs/cacert.pem"
 fi
 export DISABLE_AUTO_UDPATE=true
-export EDITOR="mvim -v"
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh
 plugins=(git ruby osx lol nyan vi-mode)
@@ -38,6 +37,10 @@ if [ -f $mvim ]; then
   alias vim="$mvim -v"
   alias vimdiff="$mvim -v -d"
   alias mvim="$mvim --remote-tab-silent"
+
+  export EDITOR="mvim -v"
+else
+  export EDITOR="vim"
 fi
 if [ -f "/sys/class/thermal/thermal_zone0/temp" ]; then
   temp="/sys/class/thermal/thermal_zone0/temp"
