@@ -5,17 +5,25 @@ if [[ "$OSTYPE" == darwin* && -f "/etc/zshenv" && ! -f "/etc/zprofile" ]]; then
   sudo mv "/etc/zshenv" "/etc/zprofile"
 fi
 
-if [ -f "$HOME/.certs/cacert.pem" ]; then
-  export GIT_SSL_CAINFO="$HOME/.certs/cacert.pem"
-fi
-export DISABLE_AUTO_UDPATE=true
+ZSH=$HOME/.oh-my-zsh
+ZSH_CUSTOM=$HOME/.zsh
+ZSH_THEME="twilight"
+DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_UDPATE="true"
+
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh
 plugins=(git ruby osx lol nyan vi-mode)
 ZSH_THEME="twilight"
+
+plugins=(git ruby osx lol nyan vi-mode)
+
 source $ZSH/oh-my-zsh.sh
 
-DISABLE_AUTO_TITLE="true"
+if [ -f "$HOME/.certs/cacert.pem" ]; then
+  export GIT_SSL_CAINFO="$HOME/.certs/cacert.pem"
+fi
+
 bindkey -v
 set -o vi
 
@@ -32,6 +40,8 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+
+
 mvim=/usr/local/bin/mvim
 if [ -f $mvim ]; then
   alias vim="$mvim -v"
@@ -42,6 +52,7 @@ if [ -f $mvim ]; then
 else
   export EDITOR="vim"
 fi
+
 if [ -f "/sys/class/thermal/thermal_zone0/temp" ]; then
   temp="/sys/class/thermal/thermal_zone0/temp"
 elif [ -f "/proc/acpi/thermal_zone/THRM/temperature" ]; then
@@ -51,4 +62,5 @@ fi
 if [ -n "$temp" ]; then
   alias temp="echo \"$(cat /sys/class/thermal/thermal_zone0/temp | sed 's/.\{3\}$//') *C\""
 fi
+
 alias less="less -FXRS"
