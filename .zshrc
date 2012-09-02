@@ -63,4 +63,5 @@ if [ -n "$temp" ]; then
   alias temp="echo \"$(cat /sys/class/thermal/thermal_zone0/temp | sed 's/.\{3\}$//') *C\""
 fi
 
+alias sgit="sudo -s git"
 alias less="less -FXRS"
