@@ -55,6 +55,8 @@ highlight PmenuSel term=none ctermfg=251 ctermbg=236 gui=none guifg=#c6c6c6 guib
 highlight PmenuSbar ctermbg=251 guibg=#c6c6c6
 highlight PmenuThumb ctermbg=234 guibg=#1c1c1c
 
+command Wsudo w !sudo tee % > /dev/null
+
 noremap j gj
 noremap k gk
 
