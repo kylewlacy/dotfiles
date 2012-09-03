@@ -8,6 +8,7 @@ fi
 if [ -f "$HOME/.certs/cacert.pem" ]; then
   export GIT_SSL_CAINFO="$HOME/.certs/cacert.pem"
 fi
+export GNUPGHOME=$(readlink "$HOME/.gnupg")
 export DISABLE_AUTO_UDPATE=true
 ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh
