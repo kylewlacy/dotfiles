@@ -20,6 +20,8 @@ DISABLE_AUTO_TITLE="true"
 bindkey -v
 set -o vi
 
+setopt hist_ignore_all_dups
+
 bindkey "^W" backward-kill-word
 bindkey "^H" backward-delete-char
 bindkey "^U" backward-kill-line
