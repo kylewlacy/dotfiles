@@ -17,9 +17,11 @@ Reinstallation
 Run the following commands to reinstall all dotfiles back to the home directory:
  
     $ cd ~
-    $ git clone --recursive git://github.com/kylewlacy/dotfiles.git
+    $ git clone git://github.com/kylewlacy/dotfiles.git
     $ mv dotfiles/{,.}* .
     $ mv .git .dotfiles.git
+    $ git df submodule init
+    $ git df submodule update
 
 Notes
 -----
