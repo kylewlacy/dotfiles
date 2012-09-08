@@ -1,4 +1,4 @@
-export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
+export PATH="/usr/local/bin:$PATH:/usr/local/sbin:/sbin"
 if [[ "$OSTYPE" == darwin* && -f "/etc/zshenv" && ! -f "/etc/zprofile" ]]; then
   # This fixes ZSH paths for MacVim
   # From http://stackoverflow.com/a/7382033/1311454
