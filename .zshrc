@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 if [ -f "$HOME/.certs/cacert.pem" ]; then
   export GIT_SSL_CAINFO="$HOME/.certs/cacert.pem"
 fi
-export GNUPGHOME=$(readlink "$HOME/.gnupg")
+export GNUPGHOME="$(readlink "$HOME/.gnupg")"
 
 bindkey -v
 set -o vi
