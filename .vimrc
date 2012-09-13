@@ -123,7 +123,7 @@ function! Plugins()
     let g:CommandTScanDotDirectories=1
     let g:CommandTMaxHeight=15
     let g:CommandTCancelMap=['<C-c>', '<Esc>']
-    set wildignore+=.git/**,.Trash/**,.DS_Store,*.swp
+    set wildignore+=.git/**,.Trash/**,.DS_Store,*.swp,.sass-cache/**
   endif
 endfunction
 
