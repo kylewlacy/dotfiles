@@ -9,15 +9,7 @@ R=$reset_color
 G=git_prompt_info
 if [ $UID -eq 0 ]; then N=$RED; else N=$GREEN; fi
 
-# PROMPT="${N}%n${R}@%{$BLUE%}%m${R}:%{$ORANGE%}%~%{$G%}%{$RED%} %(!:#:$)${R} "
-# PROMPT2="%{$RED%}%_ > ${R}"
-
-# ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[yellow]%}("
-# ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}•${R}"
-# ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}○${R}"
-# ZSH_THEME_GIT_PROMPT_SUFFIX="%{$fg[yellow]%})${R}"
-
-PROMPT='%{$N%}%n%{$R%}@%{$BLUE%}%m%{$R%}:%{$ORANGE%}%~$($G) %{$RED%}%(!.#.$)%{$R%} '
+PROMPT='%{$N%}%n%{$R%}@%{$BLUE%}%m%{$R%}:%{$ORANGE%}%c$($G) %{$RED%}%(!.#.$)%{$R%} '
 PROMPT2='%{$RED%}%_ > %{$R%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$YELLOW%}("
