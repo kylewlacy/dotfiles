@@ -9,7 +9,6 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh
 ZSH_THEME="twilight"
 DISABLE_AUTO_TITLE="true"
-DISABLE_AUTO_UDPATE="true"
 
 plugins=(ruby osx lol nyan vi-mode)
 
