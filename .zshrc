@@ -11,7 +11,7 @@ ZSH_THEME="twilight"
 DISABLE_AUTO_TITLE="true"
 DISABLE_AUTO_UDPATE="true"
 
-plugins=(git ruby osx lol nyan vi-mode)
+plugins=(ruby osx lol nyan vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
