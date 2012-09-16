@@ -12,6 +12,7 @@ set shiftwidth=2
 set tabstop=2
 set number
 set clipboard=unnamed
+set scrolloff=3
 set backspace=2
 set t_Co=256
 set showcmd
