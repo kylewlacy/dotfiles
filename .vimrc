@@ -55,6 +55,7 @@ highlight Pmenu term=none ctermfg=236 ctermbg=251 gui=none guifg=#303030 guibg=#
 highlight PmenuSel term=none ctermfg=251 ctermbg=236 gui=none guifg=#c6c6c6 guibg=#303030
 highlight PmenuSbar ctermbg=251 guibg=#c6c6c6
 highlight PmenuThumb ctermbg=234 guibg=#1c1c1c
+highlight Search cterm=underline ctermfg=15 ctermbg=none gui=underline guifg=#ffffff guibg=NONE
 
 command Wsudo w !sudo tee % > /dev/null
 
