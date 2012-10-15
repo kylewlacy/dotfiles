@@ -46,7 +46,7 @@
 
 	df = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
 [core]
-	excludesfile = /Users/kyle/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
 [diff]
