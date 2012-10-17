@@ -45,6 +45,7 @@
 	clg = "!source ~/.scripts/git/clone-github.sh"
 
 	df = "!git --work-tree=$HOME --git-dir=$HOME/.dotfiles.git"
+	sf = "!git --work-tree=/ --git-dir=$HOME/.serverfiles.git"
 [core]
 	excludesfile = ~/.gitignore_global
 [color]
