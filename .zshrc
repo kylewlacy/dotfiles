@@ -9,6 +9,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_CUSTOM=$HOME/.zsh
 ZSH_THEME="twilight"
 DISABLE_AUTO_TITLE="true"
+skip_global_compinit=1
 
 plugins=(ruby osx lol nyan vi-mode)
 
