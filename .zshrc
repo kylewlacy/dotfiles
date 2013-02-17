@@ -64,3 +64,6 @@ alias less="less -FXRS"
 
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
